@@ -31,28 +31,13 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light dark; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -68,34 +53,82 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.background-hero {
+  background-image: url(./images/hero-img-mobile.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom 0% right 62%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media only screen and (min-width: 600px) {
+  .background-hero {
+    background-image: none;
   }
-  a:hover {
-    color: #747bff;
+}
+
+.articulat {
+  font-family: "articulat-cf", sans-serif;
+}
+
+.crown {
+  left: 50%;
+  transform: translate(-50%, -215%);
+}
+
+.bio-bg {
+  background-image: url(./images/misc-bg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .bio-bg {
+    background-image: none;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+.bio-bg-highlight {
+  background-image: url(./images/misc-bg2.svg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@media only screen and (min-width: 600px) {
+  .bio-bg-highlight {
+    background-image: none;
   }
+}
+
+.video-bg {
+  background-image: url(./images/cherry-grey.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+@media only screen and (min-width: 600px) {
+  .video-bg {
+    background-image: none;
+  }
+}
+
+.signature::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  left: -35px;
+  top: 22px;
+}
+.signature::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  left: 135px;
+  top: 22px;
 }
