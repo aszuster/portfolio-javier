@@ -31,14 +31,16 @@ function newRelease() {
             alt=""
             className="absolute w-[42px] top-[70px] right-[35px] lg:right-[-40px] xl:right-[35px] xxl:right-[-20px] xxxl:right-[35px] lg:w-[110.7px] lg:top-[192px] xl:top-[200px] xxl:top-[22px]"
           />
-          <h2 className="text-blue text-center re-70 text-7xl  tracking-tighter leading-[90%] lg:text-[188px]">
+          <h2 className="title-futuro text-blue text-center re-70 text-7xl  tracking-tighter leading-[90%] lg:text-[188px]">
             el futuro de la música es arcade
           </h2>
         </div>
+        <div className="text-emperador">
         <img src={pixelCrown} alt="" className="mx-auto w-[30px] mt-[42px] lg:w-[66.6px] lg:mt-[50px] xl:mt-[60px] xxl:mt-[100px]" />
         <p className="text-dark articulat text-center text-xs font-medium tracking-[1.54px] mt-[10px] lg:text-[14.4px] lg:tracking-[4.5px] lg:mt-[23.4px]">
           niño emperador
         </p>
+        </div>
       </section>
     </>
   );

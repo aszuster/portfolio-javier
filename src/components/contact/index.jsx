@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import arrow from "../../images/arrow-down-white.png";
-import fruits from "../../images/fruits.svg";
 import greySquare from "../../images/light-grey-square.svg"
 import cherry from "../../images/cherry-white.svg"
 import banana from "../../images/banana-white.svg"
+
 
 function Contact() {
   return (
@@ -145,7 +145,9 @@ function Contact() {
         </div>
 
         </div>
+    
       </section>
+
     </>
   );
 }

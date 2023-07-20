@@ -6,6 +6,7 @@ import youtubeLogo from "../../images/youtube-logo.svg";
 import linkedinLogo from "../../images/linkedin-logo.svg";
 import instaLogo from "../../images/instagram-logo.svg";
 
+
 function Footer() {
   return (
     <>
@@ -79,6 +80,7 @@ function Footer() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

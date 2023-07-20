@@ -3,10 +3,11 @@ import { useState } from "react";
 import crown from "../../images/crown.png";
 import profilePic from "../../images/profile-pic.png";
 import greenSquare from "../../images/green-square.svg";
+import Button from "../Button"
 
 function Bio() {
   return (
-    <div className="bg-grey">
+    <div className="bg-grey">   
       <section className="bg-grey h-auto w-screen overflow-hidden relative lg:flex lg:justify-center ">
         <img
           src={greenSquare}
@@ -60,6 +61,7 @@ function Bio() {
             />
           </div>
         </div>
+        <Button/>
       </section>
     </div>
   );
