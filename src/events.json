@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "fecha": "24 de Febrero",
+        "hora": "20:30hs",
+        "espacio": "Estado Malvinas",
+        "ciudad": "Barcelona"
+    },
+    {
+        "id":2,
+        "fecha": "26 de Febrero",
+        "hora": "20:30hs",
+        "espacio": "Estado Malvinas",
+        "ciudad": "Barcelona"
+    },
+    {
+        "id":3,
+        "fecha": "28 de Febrero",
+        "hora": "20:30hs",
+        "espacio": "Estado Malvinas",
+        "ciudad": "Barcelona"
+    },
+    {
+        "id":4,
+        "fecha": "28 de Febrero",
+        "hora": "20:30hs",
+        "espacio": "Estado Malvinas",
+        "ciudad": "Barcelona"
+    },
+    {
+        "id":5,
+        "fecha": "3 de Marzo",
+        "hora": "20:30hs",
+        "espacio": "Estado Malvinas",
+        "ciudad": "Barcelona"
+    }
+]

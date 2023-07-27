@@ -136,27 +136,33 @@ h1 {
 
 @media only screen and (min-width: 1440px) {
   .bio-bg {
-    background-image: url(./images/misc-bg.svg);
-    background-size: 100%;
+   background: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .bio-bg-dsk {
+    background-image: url(./images/bio-bg-desktop.svg);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right top;
   }
 }
 
 @media only screen and (min-width: 1536px) {
-  .bio-bg {
-    background-image: url(./images/misc-bg.svg);
-    background-size: 100%;
+  .bio-bg-dsk {
+    background-image: url(./images/bio-bg-desktop.svg);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: right top;
   }
 }
 @media only screen and (min-width: 1727px) {
-  .bio-bg {
-    background-image: url(./images/misc-bg.svg);
-    background-size: 100%;
+  .bio-bg-dsk {
+    background-image: url(./images/bio-bg-desktop.svg);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: right top;
   }
 }
 
@@ -212,7 +218,7 @@ h1 {
 @media only screen and (min-width: 920px) {
   .video-bg{
     background-image: url(./images/cherry-grey.svg), url(./images/grey-arrow.svg);
-    background-position: left bottom, right top;
+    background-position: left bottom -1px, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: 25%;
   }
@@ -382,3 +388,140 @@ background-color: black;
 
 
 
+/* Modal */
+
+
+/* Play Button */
+
+.play {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 6.6666666667px solid silver;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: all 200ms;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.play:after, .play:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  background-color: silver;
+  left: 25px;
+  top: 25px;
+  transition: all 200ms;
+}
+.play:after {
+  margin-left: 23px;
+  -webkit-clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
+          clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
+}
+.play:before {
+  -webkit-clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
+          clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
+}
+.play:hover {
+  border-color: #ddd;
+  box-shadow: 0 0 2px 2px rgba(221, 221, 221, 0.6);
+}
+.play:hover:before {
+  -webkit-clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
+          clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
+  background-color: #ddd;
+}
+.play:hover:after {
+  -webkit-clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
+          clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
+  background-color: #ddd;
+}
+
+.video-link{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.video-link:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.vid{
+  transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
+  position:relative
+  /* background-image: url(../src/images/videos/dior.png); */
+}
+
+.vid img{
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.vid img:hover{
+  transform: scale(1.2);
+}
+
+.play-button{
+  visibility: hidden;
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
+  opacity: 0;
+  position:absolute;
+  top:40%;
+  left:45%;
+
+}
+
+.play-button-small{
+  visibility: hidden;
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
+  opacity: 0;
+  position:absolute;
+  top:30%;
+  left:35%;
+}
+
+.play-button-mobile{
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
+  opacity: 1;
+  position:absolute;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vid:hover .play-button {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 0.6;
+}
+
+.vid:hover .play-button-small {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 0.6;
+}

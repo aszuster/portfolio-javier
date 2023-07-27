@@ -4,11 +4,11 @@ import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 const Header = () => {
     let Links =[
         {name:"Inicio",link:"/"},
-        {name:"Arcade",link:"/"},
-        {name:"Biografía",link:"/"},
-        {name:"Videos",link:"/"},
-        {name:"Conciertos",link:"/"},
-        {name:"Contacto",link:"/"},
+        {name:"Arcade",link:"#album"},
+        {name:"Biografía",link:"#bio"},
+        {name:"Videos",link:"#videos"},
+        {name:"Conciertos",link:"#events"},
+        {name:"Contacto",link:"#contact"},
       ];
       let [open, setOpen] =useState(false);
 

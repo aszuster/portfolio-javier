@@ -15,7 +15,7 @@ function Hero() {
               javier lekker
             </h1>
             <h2 className="text-green text-center articulat text-3xl font-medium xxxl:text-[45px] xxxl:mt-[-30px]">
-              ¡nueva música!
+            new level unlocked!
             </h2>
           </div>
           <img 

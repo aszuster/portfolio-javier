@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import misc4 from "../../images/misc-4.png";
+import misc4 from "../../images/misc-4.svg";
 import bomb from "../../images/bomb.png";
 import albumCover from "../../images/album-cover-placeholder.png";
 import foreslash from "../../images/forselash.svg";
@@ -11,11 +11,11 @@ import greySquare from "../../images/grey-square.svg";
 function Album() {
   return (
     <div className="bg-green">
-      <section className="bg-green h-screen w-screen overflow-hidden relative lg:flex lg:flex lg:justify-center">
+      <section className="bg-green h-screen w-screen overflow-hidden relative lg:flex lg:flex lg:justify-center" id="album">
         <img
           src={misc4}
           alt=""
-          className="w-[120px] absolute left-[-1px] lg:w-[264px]"
+          className="w-[120px] absolute left-[-1px] top-[-1px] lg:w-[264px]"
         />
         <img
           src={blackSquare}
@@ -48,16 +48,7 @@ function Album() {
                 arcade
               </h2>
               <p className="text-dark articulat font-normal mx-[13px] lg:mx-[0px] text-justify mt-[20px] lg:mt-[10px] text-sm lg:text-[21px] lg:leading-[120%]">
-                "Arcade" es el fascinante nuevo álbum de Javier Lekker, una
-                experiencia musical que nos sumerge en un mundo de sonidos
-                retro, donde la nostalgia se entrelaza con la innovación. Con
-                melodías vibrantes y letras envolventes, este álbum nos
-                transporta a una época pasada mientras nos conecta con la
-                emoción del presente.{" "}
-                <span className="font-bold">
-                  Descubre el poder de "Arcade" y déjate llevar por su
-                  cautivadora atmósfera musical.
-                </span>
+              "Arcade" es el próximo álbum de estudio de Javier Lekker, una exploración nostálgica de la transición a la edad adulta a través de la metáfora de un videojuego. Cada canción del álbum representa un "nivel" que simboliza los desafíos de la vida adulta, comenzando con temas de pop alternativo y progresando hacia un sonido más experimental y electrónico, similar al aumento de dificultad en un videojuego.
               </p>
             </div>
             <div className="mt-[20px] hidden lg:block lg:grow lg:relative ">

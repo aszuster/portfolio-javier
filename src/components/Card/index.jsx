@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import arrow from "../../images/arrow-down-black-small.png";
-import videoPlaceholder from "../../images/video-placeholder.png";
+
 
 function Card() {
   return (

@@ -1,14 +1,24 @@
 import { useState } from "react";
 
+
 import arrow from "../../images/arrow-down-white.png";
 import videoPlaceholder from "../../images/video-placeholder.png";
 import greyArrow from "../../images/grey-arrow.svg"
 import greyArrowRight from "../../images/grey-arrow-right.svg"
+import dior from "../../images/videos/dior.png"
+import termodinamica from "../../images/videos/termodinamica.png"
+import huracan from "../../images/videos/huracan.png"
+import gravedad from "../../images/videos/gravedad.png"
+import elMonstruo from "../../images/videos/el-monstruo.png"
+import { PlayCircleIcon } from '@heroicons/react/24/solid'
+
 
 function Videos() {
+
+
   return (
     <>
-      <section className="video-bg bg-dark h-auto w-screen overflow-hidden relative">
+      <section className="video-bg bg-dark h-auto w-screen overflow-hidden relative mb-[-1px]" id="videos">
         <div className="lg:max-w-[1450px] lg:mx-auto">
         <div className="flex mt-[27px] justify-center items-end gap-[10px] mb-[35px] lg:justify-start lg:mt-[90px] lg:mb-[77px] lg:px-[200px] xxxl:px-0">
           <img src={arrow} alt="" className="w-[13px] h-[13px]" />
@@ -31,23 +41,53 @@ function Videos() {
         </div>
         <div className="lg:video-bg px-[13px] lg:pb-[107px] hidden lg:block lg:ml-[200px] lg:mr-[300px]">
           <div className="grid grid-cols-2 gap-3 mt-[14px]">
-          <img src={videoPlaceholder} alt="" />
-          <img src={videoPlaceholder} alt="" />
+            <a className="vid relative overflow-hidden" href="https://www.youtube.com/watch?v=RnP-C31D1bw" target="blank" >
+          <img src={dior} alt=""/>
+          <div className="play-button"><PlayCircleIcon className="w-[70px] h-[70px] text-white"/></div>
+      
+          </a>
+          <a className="vid relative overflow-hidden" href="https://www.youtube.com/watch?v=_F0-1lnVgXk" target="blank" >
+          <img src={termodinamica} alt="" />
+          <div className="play-button"><PlayCircleIcon className="w-[70px] h-[70px] text-white"/></div>
+          </a>
           </div>
           <div className="grid grid-cols-3 gap-3 mt-[14px]">
-           
-            <img src={videoPlaceholder} alt="" />
-            <img src={videoPlaceholder} alt="" />
-            <img src={videoPlaceholder} alt="" />
+          <a className="vid relative overflow-hidden" href="https://www.youtube.com/watch?v=RneeZgIY7Yc" target="blank" >
+            <img src={huracan} alt="" />
+            <div className="play-button-small" ><PlayCircleIcon className="w-[70px] h-[70px] text-white"/></div>
+            </a>
+            <a className="vid relative overflow-hidden" href="https://www.youtube.com/watch?v=tPzfIYzlOHw" target="blank" >
+            <img src={gravedad} alt="" />
+            <div className="play-button-small"><PlayCircleIcon className="w-[70px] h-[70px] text-white"/></div>
+            </a>
+            <a className="vid relative overflow-hidden" href="https://www.youtube.com/watch?v=7eCxR5nsIIY" target="blank" >
+            <img src={elMonstruo} alt="" />
+            <div className="play-button-small"><PlayCircleIcon className="w-[70px] h-[70px] text-white"/></div>
+            </a>
           </div>
         </div>
         <div className="video-bg px-[13px] pb-[66px] lg:hidden">
-          <img src={videoPlaceholder} alt="" />
+        <a className="relative" href="https://www.youtube.com/watch?v=RnP-C31D1bw" target="blank" >
+          <img src={dior} alt=""/>
+          <div className="play-button-mobile"><PlayCircleIcon className="w-[40px] h-[40px] text-white"/></div>
+          </a>
           <div className="grid grid-cols-2 gap-3 mt-[14px]">
-            <img src={videoPlaceholder} alt="" />
-            <img src={videoPlaceholder} alt="" />
-            <img src={videoPlaceholder} alt="" />
-            <img src={videoPlaceholder} alt="" />
+          <a className="relative" href="https://www.youtube.com/watch?v=_F0-1lnVgXk" target="blank" >
+            <img src={termodinamica} alt="" />
+            <div className="play-button-mobile"><PlayCircleIcon className="w-[40px] h-[40px] text-white"/></div>
+            </a>
+            <a className="relative" href="https://www.youtube.com/watch?v=RneeZgIY7Yc" target="blank" >
+            <img src={huracan} alt="" />
+            <div className="play-button-mobile"><PlayCircleIcon className="w-[40px] h-[40px] text-white"/></div>
+            </a>
+            <a className="relative" href="https://www.youtube.com/watch?v=tPzfIYzlOHw" target="blank" >
+            <img src={gravedad} alt="" />
+            <div className="play-button-mobile"><PlayCircleIcon className="w-[40px] h-[40px] text-white"/></div>
+            </a>
+            <a className="relative" href="https://www.youtube.com/watch?v=7eCxR5nsIIY" target="blank" >
+            <img src={elMonstruo} alt="" />
+            <div className="play-button-mobile"><PlayCircleIcon className="w-[40px] h-[40px] text-white"/></div>
+            </a>
           </div>
         </div>
         </div>

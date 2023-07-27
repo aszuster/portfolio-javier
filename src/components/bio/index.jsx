@@ -8,7 +8,7 @@ import Button from "../Button"
 function Bio() {
   return (
     <div className="bg-grey">   
-      <section className="bg-grey h-auto w-screen overflow-hidden relative lg:flex lg:justify-center ">
+      <section className="bg-[#D9D9D9] h-auto w-screen overflow-hidden relative lg:flex lg:justify-center bio-bg-dsk mb-[-1px]" id="bio">
         <img
           src={greenSquare}
           alt=""
@@ -36,10 +36,7 @@ function Bio() {
               <img src={profilePic} alt="" className="w-[340px] m-auto" />
             </div>
             <p className="text-blue articulat font-normal mx-[13px] mt-[20px] text-[18px] lg:text-left lg:pr-[120px] lg:ml-[0]">
-              Javier Lekker es un talentoso músico y compositor que ha cautivado
-              al público con su estilo único y su pasión por la música. Con su
-              último lanzamiento, el álbum "Arcade", Javier Lekker nos
-              transporta a un viaje musical lleno de nostalgia y emociones.
+            Javier Lekker es el pseudónimo de Javier Ramirez, un arquitecto de profesión que ha forjado una carrera en la música a través de su pasión y formación musical. Durante más de una década, Javier ha estado componiendo canciones para otros artistas. Su sonido es una exploración de diversas influencias, desde synthpop de Alizzz, hasta el intimismo de Billie Eilish, con toques nostálgicos de su infancia jugando con máquinas recreativas.
             </p>
             <div className="flex justify-center bio-bg-highlight min-h-[200px] mt-[20px] lg:min-h-[180px]">
               <p className="text-blue articulat font-black text-center mx-[12px] mt-[20px] text-[30px] leading-[110%] tracking-tight lg:text-left lg:pl-[100px]">
@@ -48,16 +45,19 @@ function Bio() {
               </p>
             </div>
             <p className="text-blue articulat font-normal mx-[12px] mt-[20px] text-[18px] leading-[140%] mb-[80px] lg:mt-[0] lg:pr-[120px]">
-              Este proyecto nos sumerge en un mundo donde los recuerdos de la
-              infancia se entrelazan con las experiencias de la vida adulta,
-              creando una atmósfera única y cautivadora.
+            En 2022 lanza su primer EP, "Termodinámica", inspirado por el indie y la canción de autor, que explora las leyes de la física newtoniana y sus paralelismos con el mundo emocional. Este trabajo fue presentado en vivo tanto en formato acústico bajo la marca “Sofar”, como con banda completa en el festival “EA Málaga”. 
+            <br/><br/>
+            "Arcade" es el próximo álbum en estudio de Javier Lekker, y se presenta como una reflexión sobre la transición a la adultez y la añoranza de una infancia más sencilla. Este proyecto es un reflejo sobre el proceso de crecimiento y la añoranza por épocas pasadas más sencillas. El álbum se conceptualiza como un videojuego, con cada canción actuando como un nivel a superar, hasta llegar al jefe final. 
+            
+            <br/><br/>
+            El proyecto consiguió llegar la final del concurso organizado por “Sonidos Mans” estando entre los 20 elegidos y habiendo recibido más de 300 propuestas.
             </p>
           </div>
           <div className="flex justify-center bio-bg min-h-[430px] hidden lg:block lg:w-[700px] lg:min-h-[800px] xl:min-h-[700px] xxl:min-h-[800px]">
             <img
               src={profilePic}
               alt=""
-              className="w-[352px] m-auto  lg:mt-[224px]  xl:mt-[174px]"
+              className="w-[352px] m-auto  lg:mt-[224px]  xl:mt-[174px]  xl:mr-[0px] xl:w-[400px]"
             />
           </div>
         </div>

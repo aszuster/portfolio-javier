@@ -3,8 +3,10 @@ import { useState } from "react";
 import email from "../../images/email.svg";
 import location from "../../images/location.svg";
 import youtubeLogo from "../../images/youtube-logo.svg";
-import linkedinLogo from "../../images/linkedin-logo.svg";
 import instaLogo from "../../images/instagram-logo.svg";
+import tiktoklogo from "../../images/logos/tiktok-logo.svg";
+import twlogo from "../../images/logos/twitter-logo.svg";
+import soundcloudlogo from "../../images/logos/soundcloud-logo.svg"
 
 
 function Footer() {
@@ -15,7 +17,7 @@ function Footer() {
           <h3 className="text-blue font-extrabold text-[18px]">Contacto</h3>
           <div className="flex pt-[10px] gap-[8px] items-center">
             <img src={email} alt="" />{" "}
-            <p className="text-[14px]">hola@javierlekker.com</p>
+            <p className="text-[14px]">contacto@javierlekker.com</p>
           </div>
           <div className="flex pt-[10px] gap-[8px] items-center">
             <img src={location} alt="" />{" "}
@@ -28,14 +30,20 @@ function Footer() {
             ©2023 Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-[44px]">
-            <a href="">
+            <a href="https://www.youtube.com/channel/UCYOru4kwVTr8JbmhoHdnaNw" target="_blank">
               <img src={youtubeLogo} alt="" />
             </a>
-            <a href="">
-              <img src={linkedinLogo} alt="" />
-            </a>
-            <a href="">
+            <a href="https://www.instagram.com/javierlekker" target="_blank">
               <img src={instaLogo} alt="" />
+            </a>
+            <a href="https://www.tiktok.com/@javierlekker" target="_blank">
+              <img src={tiktoklogo} alt="" />
+            </a>
+            <a href="https://twitter.com/javierlekker" target="_blank">
+              <img src={twlogo} />
+            </a>
+            <a href="https://soundcloud.com/javierlekker" target="_blank">
+              <img src={soundcloudlogo}alt="" />
             </a>
           </div>
         </div>
@@ -44,39 +52,43 @@ function Footer() {
         <div className="w-[50%]">
           <p className="text-blue font-bold text-[36px]">Javier Lekker</p>
           <p className="text-[16px] my-[27px] pr-[250px]">©2023 Todos los derechos reservados. El contenido de este sitio web, incluyendo textos, imágenes, gráficos y otros materiales, está protegido por las leyes de propiedad intelectual. </p>
-          <div className="flex gap-[46px] items-center">
-          <a href=""><img src={youtubeLogo} alt="" /></a>
-          <a href=""><img src={linkedinLogo} alt="" /></a>
-          <a href=""><img src={instaLogo} alt="" /></a>
+          <div className="flex gap-[20px] items-center">
+          <a href="https://www.youtube.com/channel/UCYOru4kwVTr8JbmhoHdnaNw" target="_blank"><img src={youtubeLogo} alt="" className="w-[36px]"/></a>
+          <a href="https://www.instagram.com/javierlekker" target="_blank"><img src={instaLogo} alt="" className="w-[32px]"/></a>
+          <a href="" target="_blank"><img src={tiktoklogo} alt="" className="w-[35px]"/></a>
+          <a href="" target="_blank"><img src={twlogo} alt="" className="w-[40px]"/></a>
+          <a href="" target="_blank"><img src={soundcloudlogo} alt="" className="w-[48px]"/></a>
           </div>
         </div>
         <div className="w-[16.6%]">
         <p className="text-blue font-bold text-[21.6px] mb-[20px]">Paginas</p>
         <ul className="text-[16.2px]">
-          <a href=""><li className="my-[7px]">Inicio</li></a>
-          <a href=""><li className="my-[7px]">Arcade</li></a>
-          <a href=""><li className="my-[7px]">Biografía</li></a>
-          <a href=""><li className="my-[7px]">Videos</li></a>
-          <a href=""><li className="my-[7px]">Conciertos</li></a>
+          <a href="#"><li className="my-[7px]">Inicio</li></a>
+          <a href="#album"><li className="my-[7px]">Arcade</li></a>
+          <a href="#bio"><li className="my-[7px]">Biografía</li></a>
+          <a href="#videos"><li className="my-[7px]">Videos</li></a>
+          <a href="#events"><li className="my-[7px]">Conciertos</li></a>
         </ul>
         </div>
         <div className="w-[16.6%]">
           <p className="text-blue font-bold text-[21.6px] mb-[20px]">Servicios</p>
         <ul className="text-[16.2px]">
-          <a href=""><li className="my-[7px]">Músico</li></a>
-          <a href=""><li className="my-[7px]">Eventos</li></a>
-          <a href=""><li className="my-[7px]">Productor</li></a>
+          <li className="my-[7px]">Músico</li>
+          <li className="my-[7px]">Eventos</li>
+          <li className="my-[7px]">Productor</li>
         </ul>
         </div>
         <div className="w-[16.6%]">
           <p className="text-blue font-bold text-[21.6px] mb-[20px]">Contacto</p>
           <div className="my-[15px] flex gap-[11px]">
             <img src={email} alt="" />
-            <p className="text-[16.2px]">hola@javierlekker.com</p>
+            <a href="mailto:hola@javierlekker.com">
+            <p className="text-[16.2px]">contacto@javierlekker.com</p>
+      </a>
           </div>
           <div className="my-[15px] flex gap-[11px]">
             <img src={location} alt="" className="ml-[6px]" />
-            <p className="text-[16.2px]">Barcelona, España.</p>
+            <p className="text-[16.2px]">Málaga, España.</p>
           </div>
         </div>
       </section>

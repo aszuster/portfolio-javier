@@ -6,6 +6,7 @@ import { SwiperNavButtons } from "../SwiperNavButton";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import events from "../../events.json"
 
 // import required modules
 import { Navigation } from 'swiper/modules';
@@ -18,7 +19,7 @@ import blackRectangle from "../../images/black-rectangle.svg"
 function Events() {
   return (
     <>
-      <section className="bg-lightGrey h-auto w-screen overflow-hidden relative pb-[100px] lg:pt-[80px] xxxl:pt-[132px] lg:pb-[100px] xxxl:pb-[200px]">
+      <section className="bg-lightGrey h-auto w-screen overflow-hidden relative pb-[100px] lg:pt-[80px] xxxl:pt-[132px] lg:pb-[100px] xxxl:pb-[200px]" id="events">
         <img src={blackRectangle} alt="" className="hidden lg:block lg:absolute lg:bottom-[-1px] lg:right-0" />
         <div className="lg:max-w-[1500px] lg:mx-auto ">
           <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-start lg:mb-[60px] xxxl:mb-[136px] lg:px-20 xxxl:px-0">
@@ -59,6 +60,10 @@ function Events() {
         modules={[Navigation]}
         className="mySwiper"
       >
+        {/* {events && events.map(({ id, fecha, hora, espacio, ciudad }) => (
+          console.log(id),
+          <SwiperSlide key={id}><Card fecha={fecha} hora={hora} espacio={espacio} ciudad={ciudad}/></SwiperSlide>
+        ))} */}
         <SwiperSlide><Card/></SwiperSlide>
         <SwiperSlide><Card/></SwiperSlide>
         <SwiperSlide><Card/></SwiperSlide>
