@@ -3,35 +3,56 @@
         "id":1,
         "fecha": "24 de Febrero",
         "hora": "20:30hs",
-        "espacio": "Estado Malvinas",
-        "ciudad": "Barcelona"
+        "espacio": "Estadio La Rosaleda",
+        "ciudad": "Málaga"
     },
     {
         "id":2,
         "fecha": "26 de Febrero",
-        "hora": "20:30hs",
-        "espacio": "Estado Malvinas",
-        "ciudad": "Barcelona"
+        "hora": "21:30hs",
+        "espacio": "Estadio Santiago Bernabéu",
+        "ciudad": "Madrid"
     },
     {
         "id":3,
         "fecha": "28 de Febrero",
-        "hora": "20:30hs",
-        "espacio": "Estado Malvinas",
+        "hora": "22:30hs",
+        "espacio": "Estadio Spotify Camp Nou",
         "ciudad": "Barcelona"
     },
     {
         "id":4,
         "fecha": "28 de Febrero",
-        "hora": "20:30hs",
-        "espacio": "Estado Malvinas",
-        "ciudad": "Barcelona"
+        "hora": "20:00hs",
+        "espacio": "Estadio Mestalla",
+        "ciudad": "Valencia"
     },
     {
         "id":5,
         "fecha": "3 de Marzo",
-        "hora": "20:30hs",
-        "espacio": "Estado Malvinas",
-        "ciudad": "Barcelona"
+        "hora": "17:15hs",
+        "espacio": "Estado Benito Villamarín",
+        "ciudad": "Sevilla"
+    },
+    {
+        "id":6,
+        "fecha": "20 de Marzo",
+        "hora": "18:30hs",
+        "espacio": "Estadio La Romareda",
+        "ciudad": "Zaragoza"
+    },
+    {
+        "id":7,
+        "fecha": "26 de Abril",
+        "hora": "19:00hs",
+        "espacio": "Estadio La Rosaleda",
+        "ciudad": "Málaga"
+    },
+    {
+        "id":8,
+        "fecha": "30 de Abril",
+        "hora": "20:00hs",
+        "espacio": "Estadio José Rico Pérez",
+        "ciudad": "Alicante"
     }
 ]

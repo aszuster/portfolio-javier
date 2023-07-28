@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import pixelCrown from "../../images/crown-pixel.png";
-import blackCherry from "../../images/cherry.png";
-import blackFlower from "../../images/flower.png";
+import blackCherry from "../../images/cherry.svg";
+import blackFlower from "../../images/flower.svg";
 import blackArrow from "../../images/arrow-down-black-small.png";
 
 function newRelease() {
