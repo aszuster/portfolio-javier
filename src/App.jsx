@@ -18,7 +18,7 @@ function App() {
   const [eventList, setEventList] = useState([]);
 
   //ordena por ciudad
-  const eventsCollectionRef = query(collection(db, "events"), orderBy("ciudad", "asc"));
+  const eventsCollectionRef = query(collection(db, "events"), orderBy("fecha", "asc"));
 
   useEffect(() => {
     const getEventList = async () => {

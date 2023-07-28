@@ -18,7 +18,6 @@ import blackRectangle from "../../images/black-rectangle.svg";
 
 function Events(props) {
   const eventList = props.props;
-  console.log(eventList);
 
   return (
     <>
@@ -67,19 +66,40 @@ function Events(props) {
               className="mySwiper"
             >
               <div>
-                {eventList.map((event) => (
-                  <SwiperSlide>
-                    <div key={event.id}>
-                      <Card
-                        data={event.event}
-                        fecha={event.fecha}
-                        hora={event.hora}
-                        espacio={event.espacio}
-                        ciudad={event.ciudad}
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
+                {eventList.map((event) => {
+                  var timestamp = event.fecha.toDate();
+             
+                  const optionsDay = {
+                    day: "2-digit",
+                  };
+                  const optionsMonth = {
+                    month: "long",
+                  };
+                  let day = new Date(timestamp).toLocaleDateString(
+                    "es-ar",
+                    optionsDay
+                  );
+
+                  let month = new Date(timestamp).toLocaleDateString(
+                    "es-ar",
+                    optionsMonth
+                  );
+
+                  return (
+                    <SwiperSlide>
+                      <div key={event.id}>
+                        <Card
+                          data={event.event}
+                          dia={day}
+                          mes={month}
+                          hora={event.hora}
+                          espacio={event.espacio}
+                          ciudad={event.ciudad}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
               </div>
 
               {/* <div>
