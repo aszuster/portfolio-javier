@@ -37,12 +37,6 @@ function App() {
     getEventList();
   }, []);
 
-
-
-
-  
-
-
   return (
     <>
       <Header />
@@ -54,18 +48,6 @@ function App() {
       <Events props={eventList} />
       <Contact />
       <Footer />
-      {/* <div>
-        {eventList.map((event) => (
-          <div>
-            <h1>
-              {event.fecha}
-            </h1>
-            <p>{event.hora}</p>
-            <p>{event.espacio}</p>
-            <p>{event.ciudad}</p>
-          </div>
-        ))}
-      </div> */}
     </>
   );
 }

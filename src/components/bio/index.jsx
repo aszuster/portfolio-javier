@@ -12,7 +12,7 @@ function Bio() {
         <img
           src={greenSquare}
           alt=""
-          className="hidden lg:block absolute lg:top-[-1px] lg:left-[0]"
+          className="uniformBlink hidden lg:block absolute lg:top-[-1px] lg:left-[0]"
         />
         <div className="lg:max-w-[1728px] lg:flex lg:flex-row lg:gap-[20px] items-center lg:p-20 lg:pb-10 xxxl:p-0"> 
           <div className="lg:max-w-[700px] lg:min-h-[600px] xl:min-h-[750px]  lg:relative">

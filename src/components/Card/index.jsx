@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-import arrow from "../../images/arrow-down-black-small.png";
-import videoPlaceholder from "../../images/video-placeholder.png";
-import events from "../../events.json"
 
 function Card( data, mes, dia ) {
 

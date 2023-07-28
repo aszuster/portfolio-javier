@@ -20,7 +20,7 @@ function Album() {
         <img
           src={blackSquare}
           alt=""
-          className="hidden lg:block lg:w-[88px] lg:absolute lg:right-0 lg:top-[-1px]"
+          className="uniformBlink hidden lg:block lg:w-[88px] lg:absolute lg:right-0 lg:top-[-1px]"
         />
         <img
           src={greySquare}

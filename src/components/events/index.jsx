@@ -1,12 +1,10 @@
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { SwiperNavButtons } from "../SwiperNavButton";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import events from "../../events.json";
 
 // import required modules
 import { Navigation } from "swiper/modules";
@@ -33,7 +31,7 @@ function Events(props) {
         <div className="lg:max-w-[1500px] lg:mx-auto ">
           <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-start lg:mb-[60px] xxxl:mb-[136px] lg:px-20 xxxl:px-0">
             <div className="flex mt-[27px] justify-center items-end gap-[10px] mb-[35px]  lg:mt-[0] lg:mb-[0]">
-              <img src={arrow} alt="" className="w-[13px] h-[13px]" />
+              <img src={arrow} alt="" className="blink w-[13px] h-[13px]" />
               <p className="text-black articulat text-center text-xs font-medium tracking-[1.54px] leading-[6px] lg:tracking-[9px]">
                 próximos eventos
               </p>
@@ -65,6 +63,7 @@ function Events(props) {
               modules={[Navigation]}
               className="mySwiper"
             >
+              
               <div>
                 {eventList.map((event) => {
                   var timestamp = event.fecha.toDate();
@@ -84,7 +83,7 @@ function Events(props) {
                     "es-ar",
                     optionsMonth
                   );
-
+ 
                   return (
                     <SwiperSlide>
                       <div key={event.id}>
@@ -101,30 +100,6 @@ function Events(props) {
                   );
                 })}
               </div>
-
-              {/* <div>
-        {events.map((item) => (
-          <SwiperSlide>
-             <div key={item.id}>
-            <Card data={item.item} fecha={item.fecha} hora={item.hora} espacio={item.espacio} ciudad={item.ciudad}/>
-            </div>
-          </SwiperSlide>
-        ))}
-      </div> */}
-
-              {/* {events && events.map(({ id, fecha, hora, espacio, ciudad }) => (
-          console.log(id),
-          <SwiperSlide key={id}><Card fecha={fecha} hora={hora} espacio={espacio} ciudad={ciudad}/></SwiperSlide>
-        ))} */}
-              {/* <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide> */}
-
               <SwiperNavButtons />
             </Swiper>
           </div>

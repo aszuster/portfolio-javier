@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -35,9 +34,10 @@ html {
   font-family: "Redaction-35";
 }
 
-:root {
-  /* color-scheme: light dark; */
 
+/* GENERAL */
+
+:root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -59,6 +59,76 @@ h1 {
   line-height: 1.1;
 }
 
+.articulat {
+  font-family: "articulat-cf", sans-serif;
+}
+
+.arrow {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+/* Blink Animation */
+
+.blink {
+  /* animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite; */
+  animation: blink 1s linear infinite;
+}
+
+.uniformBlink {
+  animation: uniformBlink 2s steps(1, end) infinite;
+}
+
+/* Arrow Animation Horizontal */
+
+.arrowAnimX {
+  transform: translatex(0px);
+  animation: horizontalFloat 1.5s ease-in-out infinite;
+}
+
+/* Scroll to top */
+
+.top-to-btm {
+  position: fixed;
+  width: 100%;
+  right: 2rem;
+  bottom: 3rem;
+  height: 60px;
+  width: 60px;
+  font-size: 3rem;
+  z-index: 999;
+  cursor: pointer;
+  color: #7df94e;
+}
+
+
+/* NAVBAR */
+
+.navbar-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: black;
+  display: block;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  opacity: 1;
+  background-color: #7df94e;
+  display: block;
+}
+
+
+/* HERO */
+
 .background-hero {
   background-image: url(./images/hero-img-mobile.png);
   background-size: 100%;
@@ -72,21 +142,35 @@ h1 {
   }
 }
 
-
 @media only screen and (min-width: 920px) {
   .background-hero {
     background-image: none;
   }
 }
 
-.articulat {
-  font-family: "articulat-cf", sans-serif;
+/* Hero image animation */
+
+.heroImage {
+  transform: translatey(0px);
+  animation: float 2s ease-in-out infinite;
 }
+
+/* Hero Title Animation */
+
+.title-hero {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #7df94e; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+
+/* BIO */
 
 .crown {
   left: 50%;
   transform: translate(-50%, -215%);
-
 }
 
 @media only screen and (min-width: 920px) {
@@ -95,7 +179,6 @@ h1 {
     top: 269px;
   }
 }
-
 
 @media only screen and (min-width: 1440px) {
   .crown {
@@ -136,7 +219,7 @@ h1 {
 
 @media only screen and (min-width: 1440px) {
   .bio-bg {
-   background: none;
+    background: none;
   }
 }
 
@@ -182,6 +265,18 @@ h1 {
   }
 }
 
+
+/* NEW RELEASE */
+
+/* Niño emperador animation */
+.text-emperador {
+  transform: translatey(0px);
+  animation: float 2s ease-in-out infinite;
+}
+
+
+/* VIDEOS */
+
 .video-bg {
   background-image: url(./images/cherry-grey.svg);
   background-size: 100%;
@@ -195,58 +290,155 @@ h1 {
   }
 }
 
-.signature::after {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background-color: blue;
-  position: absolute;
-  left: -35px;
-  top: 22px;
-}
-.signature::before {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background-color: blue;
-  position: absolute;
-  left: 135px;
-  top: 22px;
-}
-
-
 @media only screen and (min-width: 920px) {
-  .video-bg{
-    background-image: url(./images/cherry-grey.svg), url(./images/grey-arrow.svg);
+  .video-bg {
+    background-image: url(./images/cherry-grey.svg),
+      url(./images/grey-arrow.svg);
     background-position: left bottom -1px, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: 25%;
   }
-  
 }
 
-/* Change Autocomplete styles in Chrome*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: bottom 1px solid #7DF94E;
-  -webkit-text-fill-color: #7DF94E;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-  transition: background-color 5000s ease-in-out 0s;
+/* Play Button */
+
+.play {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 6.6666666667px solid silver;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: all 200ms;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.play:after,
+.play:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  background-color: silver;
+  left: 25px;
+  top: 25px;
+  transition: all 200ms;
+}
+.play:after {
+  margin-left: 23px;
+  -webkit-clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
+  clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
+}
+.play:before {
+  -webkit-clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
+  clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
+}
+.play:hover {
+  border-color: #ddd;
+  box-shadow: 0 0 2px 2px rgba(221, 221, 221, 0.6);
+}
+.play:hover:before {
+  -webkit-clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
+  clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
+  background-color: #ddd;
+}
+.play:hover:after {
+  -webkit-clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
+  clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
+  background-color: #ddd;
 }
 
-.arrow {
-width: 41px;
-height: 41px;
-border-radius: 50%;
-background-color: black;
+.video-link {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
+
+.video-link:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.vid {
+  transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
+  position: relative;
+}
+
+.vid img {
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.vid img:hover {
+  transform: scale(1.2);
+}
+
+.play-button {
+  visibility: hidden;
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out,
+    transform 0.24s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+.play-button-small {
+  visibility: hidden;
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out,
+    transform 0.24s ease;
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+.play-button-mobile {
+  font-size: 2rem;
+  font-weight: 300;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  letter-spacing: 1px;
+  transform: scale(0.6);
+  transition: visibility 0.14s ease-out, opacity 0.14s ease-out,
+    transform 0.24s ease;
+  opacity: 1;
+  position: absolute;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vid:hover .play-button {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 0.6;
+}
+
+.vid:hover .play-button-small {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 0.6;
+}
+
+
+/* EVENTS */
 
 .arrow.arrow-left {
   left: 0;
@@ -257,12 +449,9 @@ background-color: black;
 
 @media only screen and (min-width: 920px) {
   .swiper {
-    padding:3rem;
+    padding: 3rem;
   }
-  
 }
-
-
 
 .swiper .res-slide {
   min-width: 300px;
@@ -283,245 +472,205 @@ background-color: black;
   margin: 0px 0.5rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   margin-top: 0px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .swiper-nav-btns button:hover {
-  background-color: #C9C9C9;
+  background-color: #c9c9c9;
   cursor: pointer;
 }
 
-/* Scroll to top */
 
-.top-to-btm{
-  position: fixed; 
-  width: 100%;
-  right: 2rem;
-  bottom: 3rem;
-  height: 60px;
-  width:60px;
-  font-size: 3rem;
-  z-index: 999;
-  cursor: pointer;
-  color: #7DF94E;
+/* CONTACT */
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: bottom 1px solid #7df94e;
+  -webkit-text-fill-color: #7df94e;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* FOOTER */
+
+.signature::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  left: -35px;
+  top: 22px;
+}
+.signature::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  left: 135px;
+  top: 22px;
+}
+
+/* Underline Animation */
+
+.underlineAnim {
+  position: relative;
+}
+
+.underlineAnim::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0d0cff;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underlineAnim:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  .underlineAnim:hover {
+    color: #0d0cff;
+  }
 }
 
 
 @media only screen and (min-width: 920px) {
-  .top-to-btm{
+  .top-to-btm {
     right: 3rem;
     bottom: 7rem;
   }
 }
 
-/* Hero image animation */
 
-.heroImage{
-  transform: translatey(0px);
-	animation: float 2s ease-in-out infinite;
-}
+/* KEYFRAMES */
+
+/* Float Animation Keyframes */
 
 @keyframes float {
-	0% {
-
-		transform: translatey(0px);
-	}
-	50% {
-	
-		transform: translatey(-20px);
-	}
-	100% {
-	
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
-/* Hero Title Animation */
-.title-hero {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #7DF94E; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+@keyframes horizontalFloat {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
-/* The typing effect */
+/* Blink Animation Keyframes */
+
+@keyframes blink2 {
+  20%,
+  24%,
+  55% {
+    opacity: 0;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes uniformBlink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Typing effect */
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* The typewriter cursor effect */
+/* Typewriter cursor effect */
+
 @keyframes blink-caret {
-  from, to { border-color: transparent;}
-  50% { border-color: #7DF94E; }
-}
-
-
-/* Niño emperador animation */
-.text-emperador{
-  transform: translatey(0px);
-	animation: float 2s ease-in-out infinite;
-}
-
-
-.navbar-link::after{
-  content: "";
-  height: 2px;
-  width: 0%;
-  background-color: black;
-  display: block;
-  opacity: 1;
-  transition: all 0.4s ease-in-out;
-}
-
-.navbar-link:hover::after{
-  content: "";
-  height: 2px;
-  width: 100%;
-  opacity: 1;
-  background-color: #7DF94E;
-  display: block;
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7df94e;
+  }
 }
 
 
 
-/* Modal */
 
 
-/* Play Button */
 
-.play {
-  width: 100px;
-  height: 100px;
-  background-color: transparent;
-  border: 6.6666666667px solid silver;
-  border-radius: 20%;
-  cursor: pointer;
-  transition: all 200ms;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.play:after, .play:before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 50px;
-  background-color: silver;
-  left: 25px;
-  top: 25px;
-  transition: all 200ms;
-}
-.play:after {
-  margin-left: 23px;
-  -webkit-clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
-          clip-path: polygon(0px 12.5px, 25px 25px, 25px 25px, 0px 37.5px);
-}
-.play:before {
-  -webkit-clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
-          clip-path: polygon(0px 0px, 25px 13.5px, 25px 36.5px, 0px 50px);
-}
-.play:hover {
-  border-color: #ddd;
-  box-shadow: 0 0 2px 2px rgba(221, 221, 221, 0.6);
-}
-.play:hover:before {
-  -webkit-clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
-          clip-path: polygon(0px 0px, 18.75px 0, 18.75px 50px, 0px 50px);
-  background-color: #ddd;
-}
-.play:hover:after {
-  -webkit-clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
-          clip-path: polygon(6.25px 0px, 25px 0, 25px 50px, 6.25px 50px);
-  background-color: #ddd;
-}
 
-.video-link{
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
 
-.video-link:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
-}
-
-.vid{
-  transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
-  position:relative
-  /* background-image: url(../src/images/videos/dior.png); */
-}
-
-.vid img{
-  transform: scale(1);
-  will-change: transform;
-  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.vid img:hover{
-  transform: scale(1.2);
-}
-
-.play-button{
-  visibility: hidden;
-  font-size: 2rem;
-  font-weight: 300;
-  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
-  justify-content: center;
-  letter-spacing: 1px;
-  transform: scale(0.6);
-  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
-  opacity: 0;
-  position:absolute;
-  top:40%;
-  left:45%;
-
-}
-
-.play-button-small{
-  visibility: hidden;
-  font-size: 2rem;
-  font-weight: 300;
-  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
-  justify-content: center;
-  letter-spacing: 1px;
-  transform: scale(0.6);
-  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
-  opacity: 0;
-  position:absolute;
-  top:30%;
-  left:35%;
-}
-
-.play-button-mobile{
-  font-size: 2rem;
-  font-weight: 300;
-  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(0, 0, 0, 0.3);
-  justify-content: center;
-  letter-spacing: 1px;
-  transform: scale(0.6);
-  transition: visibility 0.14s ease-out, opacity 0.14s ease-out, transform 0.24s ease;
-  opacity: 1;
-  position:absolute;
-  opacity: 0.5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.vid:hover .play-button {
-  visibility: visible;
-  transform: scale(1);
-  opacity: 0.6;
-}
-
-.vid:hover .play-button-small {
-  visibility: visible;
-  transform: scale(1);
-  opacity: 0.6;
-}

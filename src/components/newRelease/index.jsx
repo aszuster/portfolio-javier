@@ -11,7 +11,7 @@ function newRelease() {
       <section className="bg-white h-auto w-screen overflow-hidden relative mb-[40px] lg:mb-[97.6px]">
         <div className="lg:flex lg:justify-around lg:mt-[65px] xl:mt-[70px] xxl:mt-[80px] xxxl:mt-[100px] lg:mb-[83px] xl:mb-[100px] xxl:mb-[130px] xxxl:mb-[186px]">
           <div className="hidden lg:flex ">
-            <img src={blackArrow} alt="" className="w-[14.4px] lg:mr-[20px]" />
+            <img src={blackArrow} alt="" className="blink w-[14.4px] lg:mr-[20px]" />
             <p className="text-dark articulat text-center text-xs font-medium tracking-[1.54px] mt-[27px] mb-[65px] lg:tracking-[9px] lg:my-[0]">
               hyperpop & synthpop
             </p>

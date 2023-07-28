@@ -18,7 +18,7 @@ function Contact() {
         <div className="lg:max-w-[1420px] lg:mx-auto lg:flex xxx:flex-row lg:gap-28 xxxl:gap-56">
           <div className="lg:flex lg:flex-col-reverse">
             <div className="flex mt-[27px] justify-center items-end gap-[10px] mb-[35px] lg:justify-start lg:my-[0]">
-              <img src={arrow} alt="" className="w-[13px] h-[13px]" />
+              <img src={arrow} alt="" className="blink w-[13px] h-[13px]" />
               <p className="text-white articulat text-center text-xs font-medium tracking-[7.6px] leading-[6px]">
                 músico & productor
               </p>
@@ -41,7 +41,6 @@ function Contact() {
               </div>
             </div>
             <div className="flex w-full justify-between px-[20px]">
-              {/* <img src={fruits} alt="" className="px-[25px]" /> */}
               <img src={banana} alt="" className="w-[51px] lg:w-[55px]" />
               <img src={cherry} alt="" className="w-[51px] lg:w-[55px]" />
               <img src={banana} alt="" className="w-[51px] lg:w-[55px]" />

@@ -63,11 +63,11 @@ function Footer() {
         <div className="w-[16.6%]">
         <p className="text-blue font-bold text-[21.6px] mb-[20px]">Paginas</p>
         <ul className="text-[16.2px]">
-          <a href="#"><li className="my-[7px]">Inicio</li></a>
-          <a href="#album"><li className="my-[7px]">Arcade</li></a>
-          <a href="#bio"><li className="my-[7px]">Biografía</li></a>
-          <a href="#videos"><li className="my-[7px]">Videos</li></a>
-          <a href="#events"><li className="my-[7px]">Conciertos</li></a>
+          <li className="my-[7px]"><a className="underlineAnim" href="#">Inicio</a></li>
+          <li className="my-[7px]"><a className="underlineAnim" href="#album">Arcade</a></li>
+          <li className="my-[7px]"><a className="underlineAnim" href="#bio">Biografía</a></li>
+          <li className="my-[7px]"><a className="underlineAnim" href="#videos">Videos</a></li>
+          <li className="my-[7px]"><a className="underlineAnim" href="#events">Conciertos</a></li>
         </ul>
         </div>
         <div className="w-[16.6%]">
