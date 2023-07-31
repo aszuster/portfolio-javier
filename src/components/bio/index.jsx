@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import crown from "../../images/crown.png";
-import profilePic from "../../images/profile-pic.png";
+import profilePic from "../../images/profile-pic.jpg";
 import greenSquare from "../../images/green-square.svg";
 import Button from "../Button"
 

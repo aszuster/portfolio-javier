@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import misc4 from "../../images/misc-4.svg";
 import bomb from "../../images/bomb.png";
-import albumCover from "../../images/album-cover-placeholder.png";
+import albumCover from "../../images/portada-arcade.png";
 import foreslash from "../../images/forselash.svg";
 import misc3 from "../../images/misc-3.svg";
 import blackSquare from "../../images/black-square.svg";

@@ -16,8 +16,9 @@ import { getDocs, collection, query, orderBy } from "firebase/firestore";
 function App() {
   const [count, setCount] = useState(0);
   const [eventList, setEventList] = useState([]);
+  const [videoList, setVideoList] = useState([]);
 
-  //ordena por ciudad
+  //Tomar eventos por fecha
   const eventsCollectionRef = query(collection(db, "events"), orderBy("fecha", "asc"));
 
   useEffect(() => {
@@ -37,6 +38,27 @@ function App() {
     getEventList();
   }, []);
 
+
+    //Tomar videos por orden
+    const videosCollectionRef = query(collection(db, "videos"), orderBy("order", "asc"));
+
+    useEffect(() => {
+      const getVideoList = async () => {
+        try {
+          const data = await getDocs(videosCollectionRef);
+          const filteredData = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setVideoList(filteredData)
+        } catch (err) {
+          console.log(err);
+        }
+      };
+  
+      getVideoList();
+    }, []);
+
   return (
     <>
       <Header />
@@ -44,7 +66,7 @@ function App() {
       <Album />
       <Bio />
       <NewRelease />
-      <Videos />
+      <Videos props={videoList} />
       <Events props={eventList} />
       <Contact />
       <Footer />

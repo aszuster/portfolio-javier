@@ -53,11 +53,11 @@ function Footer() {
           <p className="text-blue font-bold text-[36px]">Javier Lekker</p>
           <p className="text-[16px] my-[27px] pr-[250px]">©2023 Todos los derechos reservados. El contenido de este sitio web, incluyendo textos, imágenes, gráficos y otros materiales, está protegido por las leyes de propiedad intelectual. </p>
           <div className="flex gap-[20px] items-center">
-          <a href="https://www.youtube.com/channel/UCYOru4kwVTr8JbmhoHdnaNw" target="_blank"><img src={youtubeLogo} alt="" className="w-[36px]"/></a>
-          <a href="https://www.instagram.com/javierlekker" target="_blank"><img src={instaLogo} alt="" className="w-[32px]"/></a>
-          <a href="" target="_blank"><img src={tiktoklogo} alt="" className="w-[35px]"/></a>
-          <a href="" target="_blank"><img src={twlogo} alt="" className="w-[40px]"/></a>
-          <a href="" target="_blank"><img src={soundcloudlogo} alt="" className="w-[48px]"/></a>
+          <a href="https://www.youtube.com/channel/UCYOru4kwVTr8JbmhoHdnaNw" target="_blank"><img src={youtubeLogo} alt="" className="h-[24px]"/></a>
+          <a href="https://www.instagram.com/javierlekker" target="_blank"><img src={instaLogo} alt="" className="h-[24px]"/></a>
+          <a href="" target="_blank"><img src={tiktoklogo} alt="" className="h-[24px]"/></a>
+          <a href="" target="_blank"><img src={twlogo} alt="" className="h-[24px]"/></a>
+          <a href="" target="_blank"><img src={soundcloudlogo} alt="" className="h-[24px]"/></a>
           </div>
         </div>
         <div className="w-[16.6%]">
