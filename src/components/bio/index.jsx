@@ -4,6 +4,7 @@ import crown from "../../images/crown.png";
 import profilePic from "../../images/profile-pic.jpg";
 import greenSquare from "../../images/green-square.svg";
 import Button from "../Button"
+import foto from "../../images/FOTO.png"
 
 function Bio() {
   return (
@@ -53,11 +54,18 @@ function Bio() {
             El proyecto consiguió llegar la final del concurso organizado por “Sonidos Mans” estando entre los 20 elegidos y habiendo recibido más de 300 propuestas.
             </p>
           </div>
-          <div className="flex justify-center bio-bg min-h-[430px] hidden lg:block lg:w-[700px] lg:min-h-[800px] xl:min-h-[700px] xxl:min-h-[800px]">
+          {/* <div className="flex justify-center bio-bg min-h-[430px] hidden lg:block lg:w-[700px] lg:min-h-[800px] xl:min-h-[700px] xxl:min-h-[800px]">
             <img
               src={profilePic}
               alt=""
               className="w-[352px] m-auto  lg:mt-[224px]  xl:mt-[174px]  xl:mr-[0px] xl:w-[400px]"
+            />
+          </div> */}
+                    <div className="flex justify-center bio-bg min-h-[430px] hidden lg:block lg:w-[700px] lg:min-h-[800px] xl:min-h-[700px] xxl:min-h-[800px]">
+            <img
+              src={foto}
+              alt=""
+              className="lg:w-[500px] xl:w-[600px] xxl:w-[650px] xxxl:w-[700px] lg:absolute lg:top-0 lg:right-0"
             />
           </div>
         </div>

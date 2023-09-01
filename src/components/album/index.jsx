@@ -57,11 +57,13 @@ function Album() {
                   <div className="flex">
                     <img src={foreslash} alt="" />
                     <p className="text-blue re-35 text-[21.6px] ml-[7px] mt-[5px]">
-                      lvl 01
+                      Tutorial
                     </p>
                   </div>
                   <p className="text-dark articulat text-[21.6px] font-semibold mt-[10px] ml-[20px]">
-                    Niño emperador.
+                  <a className="hover:text-white" href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
+                  Que me paren los pies
+                  </a>
                   </p>
                 </div>
                 <div>
@@ -72,33 +74,27 @@ function Album() {
                     </p>
                   </div>
                   <p className="text-dark articulat text-[21.6px] font-semibold mt-[10px] ml-[20px]">
-                    Arde.
+                  <a className="hover:text-white" href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
+                  Niño emperador
+                  </a>
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center ml-[100px] mt-[30px]">
+              <div className="flex justify-center ml-[150px] mt-[30px]">
                 <div className="mr-[68px]">
                   <div className="flex">
                     <img src={foreslash} alt="" />
                     <p className="text-blue re-35 text-[21.6px] ml-[7px] mt-[5px]">
-                      lvl 01
+                      lvl 02
                     </p>
                   </div>
                   <p className="text-dark articulat text-[21.6px] font-semibold mt-[10px] ml-[20px]">
+                    <a className="hover:text-white" href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
                     Final Boss_Liturgia.
+                    </a>
                   </p>
                 </div>
-                <div>
-                  <div className="flex">
-                    <img src={foreslash} alt="" />
-                    <p className="text-blue re-35 text-[21.6px] ml-[7px] mt-[5px]">
-                      lvl 01
-                    </p>
-                  </div>
-                  <p className="text-dark articulat text-[21.6px] font-semibold mt-[10px] ml-[20px]">
-                    Dior.
-                  </p>
-                </div>
+
               </div>
               <img
                 src={misc3}
@@ -107,23 +103,27 @@ function Album() {
               />
             </div>
           </div>
+          <a href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
           <img
             src={albumCover}
             alt=""
             className="max-w-[267px] mx-auto mt-[20px] lg:max-w-[533px] lg:max-h-[414px] xl:max-h-[544px]"
           />
+          </a>
         </div>
-        <div className="mt-[20px] lg:hidden">
+        <div className="mt-[20px] block lg:hidden">
           <div className="flex ml-[13px]">
             <div className="mr-[10px]">
               <div className="flex">
                 <img src={foreslash} alt="" />
                 <p className="text-blue re-35 text-xs ml-[7px] mt-[5px]">
-                  lvl 01
+                  Tutorial
                 </p>
               </div>
               <p className="text-dark articulat text-xs font-semibold mt-[10px] ml-[20px]">
-                Niño emperador.
+              <a href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
+              Que me paren los pies
+              </a>
               </p>
             </div>
             <div>
@@ -134,33 +134,27 @@ function Album() {
                 </p>
               </div>
               <p className="text-dark articulat text-xs font-semibold mt-[10px] ml-[20px]">
-                Arde.
+              <a href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
+              Niño emperador
+              </a>
               </p>
             </div>
           </div>
-          <div className="flex justify-end mr-[50px] mt-[25px]">
+          <div className="flex justify-end mr-[100px] mt-[25px]">
             <div>
               <div className="flex">
                 <img src={foreslash} alt="" />
                 <p className="text-blue re-35 text-xs ml-[7px] mt-[5px]">
-                  lvl 01
+                  lvl 02
                 </p>
               </div>
               <p className="text-dark articulat text-xs font-semibold mt-[10px] ml-[20px]">
+              <a href="https://s.disco.ac/paoprwaxxxdt" target="_blank">
                 Final Boss_Liturgia.
+                </a>
               </p>
             </div>
-            <div>
-              <div className="flex">
-                <img src={foreslash} alt="" />
-                <p className="text-blue re-35 text-xs ml-[7px] mt-[5px]">
-                  lvl 01
-                </p>
-              </div>
-              <p className="text-dark articulat text-xs font-semibold mt-[10px] ml-[20px]">
-                Dior.
-              </p>
-            </div>
+
           </div>
         </div>
         <img src={misc3} alt="" className="absolute bottom-0 lg:hidden" />
