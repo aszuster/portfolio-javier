@@ -24,8 +24,6 @@ function Videos(props) {
 const firstVideoMobile = videos.slice(0, 1);
 const restOfVideosMobile = videos.slice(1, 5);
 
-
-
   return (
     <>
       <section
@@ -92,6 +90,7 @@ const restOfVideosMobile = videos.slice(1, 5);
             </div>
           </div>
           <div className="video-bg px-[13px] pb-[66px] lg:hidden">
+            <div className="relative">
           {firstVideoMobile.map((video) => {
                   return (
                     <a
@@ -100,12 +99,13 @@ const restOfVideosMobile = videos.slice(1, 5);
                     target="blank"
                   >
                     <img src={video.image} alt="" />
-                    <div className="play-button-mobile">
+                    <div className="play-button-mobile !top-[50%] !left-[50%]">
                       <PlayCircleIcon className="w-[40px] h-[40px] text-white" />
                     </div>
                   </a>
                   );
                 })}
+                </div>
             <div className="grid grid-cols-2 gap-3 mt-[14px]">
             {restOfVideosMobile.map((video) => {
                   return (
@@ -115,7 +115,7 @@ const restOfVideosMobile = videos.slice(1, 5);
                     target="blank"
                   >
                     <img src={video.image} alt="" />
-                    <div className="play-button-mobile">
+                    <div className="play-button-mobile !top-[50%] !left-[50%]">
                       <PlayCircleIcon className="w-[40px] h-[40px] text-white" />
                     </div>
                   </a>
