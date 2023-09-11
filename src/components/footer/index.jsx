@@ -67,7 +67,7 @@ function Footer() {
           <li className="my-[7px]"><a className="underlineAnim" href="#album">Arcade</a></li>
           <li className="my-[7px]"><a className="underlineAnim" href="#bio">Biografía</a></li>
           <li className="my-[7px]"><a className="underlineAnim" href="#videos">Videos</a></li>
-          <li className="my-[7px]"><a className="underlineAnim" href="#events">Conciertos</a></li>
+          {/* <li className="my-[7px]"><a className="underlineAnim" href="#events">Conciertos</a></li> */}
         </ul>
         </div>
         <div className="w-[16.6%]">

@@ -7,7 +7,7 @@ const Header = () => {
         {name:"Arcade",link:"#album"},
         {name:"Biografía",link:"#bio"},
         {name:"Videos",link:"#videos"},
-        {name:"Conciertos",link:"#events"},
+        // {name:"Conciertos",link:"#events"},
         {name:"Contacto",link:"#contact"},
       ];
       let [open, setOpen] =useState(false);
