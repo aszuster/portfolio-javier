@@ -20,7 +20,7 @@ function Events(props) {
   return (
     <>
       <section
-        className="bg-lightGrey h-auto w-screen overflow-hidden relative pb-[100px] lg:pt-[80px] xxxl:pt-[132px] lg:pb-[100px] xxxl:pb-[200px]"
+        className="hidden bg-lightGrey h-auto w-screen overflow-hidden relative pb-[100px] lg:pt-[80px] xxxl:pt-[132px] lg:pb-[100px] xxxl:pb-[200px]"
         id="events"
       >
         <img
